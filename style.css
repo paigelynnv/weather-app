@@ -1,36 +1,33 @@
-body {
-border: black;
-border-radius: 2px;
-background:url("https://i.pinimg.com/originals/3b/39/2b/3b392be0ffe869c1c036ace3277f88c6.jpg")
+h1 {
+  position: relative;
+  font-family: roboto, arial, sans-serif;
+  font-size: 50px;
+  line-height: 16px;
+  color: rgb(36, 38, 41);
+  text-align: left;
+  padding-top: 20px;
 }
 
 h2 {
-color: rgb(32, 33, 36);
-display: inline
-font-family: "Google Sans", arial, sans-serif;
-font-size: 48px;
-font-weight: 400;
-height: auto;
-line-height: 60px;
+  position: relative;
+  font-family: roboto, arial, sans-serif;
+  font-size: 25px;
+  line-height: 16px;
+  color: rgb(112, 117, 122);
+  text-align: left;
+  padding-top: 25px;
 }
 
-
-
-li{
-color: rgb(112, 117, 122);
-display: inline;
-font-family: Roboto, arial, sans-serif;
-font-size: 16px;
-font-weight: 400;
-height: auto;
-line-height: 20px;
-text-align: right;
-
+body {
+  padding: 20em;
+  background-size: 100% 100%;
+  outline: 2px black;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/originals/3b/39/2b/3b392be0ffe869c1c036ace3277f88c6.jpg");
 }
 
-img {
-    display: block;
-    margin: auto;
-    position: right;
+li {
+  text-align: right;
+  text-decoration: none;
+  list-style-type: none;
 }
-
