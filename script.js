@@ -28,6 +28,8 @@ function displayTemp(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
 
+  celciusTemp = response.data.main.temp;
+
   cityElement.innerHTML = response.data.name;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   tempElement.innerHTML = Math.round(response.data.main.temp);
@@ -48,7 +50,36 @@ function handleSubmit(event) {
   search(cityInputElemenet.value);
 }
 
-search("");
+function showfahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celciusTemp * 9)/ 5 + 32;
+  alert(fahrenheitTemp);
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+  celicusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+}
+
+function showcelciusTemp(event){
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.rounf(celciusTemp);
+   celicusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+}
+
+let celciusTemp = null;
+
+
+search("New York");
 
 let form = document.querySelector("search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showfahrenheitTemp);
+
+let celicusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showcelciusTemp);
