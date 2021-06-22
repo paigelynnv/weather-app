@@ -4,7 +4,6 @@ h1 {
   font-size: 50px;
   line-height: 16px;
   color: rgb(36, 38, 41);
-  text-align: left;
   padding-top: 20px;
 }
 
@@ -14,7 +13,6 @@ h2 {
   font-size: 25px;
   line-height: 16px;
   color: rgb(112, 117, 122);
-  text-align: left;
   padding-top: 25px;
 }
 
@@ -26,7 +24,6 @@ body {
 }
 
 li {
-  text-align: right;
   text-decoration: none;
   list-style-type: none;
 }

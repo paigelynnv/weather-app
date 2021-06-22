@@ -12,79 +12,77 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <div>
-    </div>
-    <div class="container">
-      <h1>
-          <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <form id ="search-form" class="mb-3">
-      <div class = "row">
-      <div class = "col-9">
-        <input 
-          class="form-control" 
+<div class="container">
+  <div class="weather-app-wrapper">
+    <div class= "weather-app">
+
+  
+    <form id="search-form" class="mb-3">
+      <div class="row">
+        <div class="col-9">
+          <input 
           type="search" 
           placeholder="Enter City" 
-          id = "city-input"
+          class="form-control"
+          id="city-input"
           autocomplete="off"
-        />
-      
-    </div>
-      <div class="col-3">
-        <input 
-          type="submit" 
-          value="Search"
-          class="btn btn-primary w-100" />
-      
-    </div>
-    </div>
+          />
+        </div>
+        <div class="col-3">
+          <input 
+          type="submit"
+          value="search"
+          class="btn btn-primary w-100"
+          />
+        </div>
+      </div>
     </form>
-  </div>
-</nav>
+
       
-      <h1 id="city"></h1>
-      <ul>
-         <li id= "temp"></li> 
-        <li>Last updated: <span id = "date"></span> </li>
-         <li id = "discription"></li>
-      </ul>
-     
-      <p>
-          <img 
+    
+  <ul>
+      <li><strong>Doylestown</strong><span id="city"></span></li>
+      <li> Friday 5:00pm <span id= "date"></span></li>
+      <li>Last updated: <span id = "date"></span> </li>
+      <li id = "discription">Sunny</li>
+  </ul>
+
+
+<div class="row">
+  <div class="col-6">
+    <ul>
+      <li>
+        Humidity:<span id = "humidity" ></span>
+      </li>
+      <li>
+        Wind Speed: <span id = "Wind" ></span>
+      </li>
+      <li>
+        Percipitation:<span id="Percipitation"></span>
+      </li>
+    </ul>  
+  <div class="col-6">
+    <ul>
+      <li>
+        <img 
           src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
           alt="cloud image"
           id= "icon"
-          class="float-left">
-
-      </p>
-      <div class="city-row">
-          <div class="col-6">
-              <ul>
-          
-                  <li>
-                      Humidity:<span id = "humidity" ></span>
-                  </li>
-                  <li>
-                    Wind Speed: <span id = "Wind" ></span>
-                  </li>
-              <div class="row">
-              <div class="clearfix weather-temp">
-                <img src="" alt="clear" id= "icon" class="float-left">
-                <div class="float-left">
-                  <strong id = "temperature"></strong>
-                  <span class="units" id = "celcius-link" class="active"> °C | 
-                    <a href= "#"  id = "fahrenheit-link">°F</a></span>
-                </div>
-              </div>
-              </div>
-          </div>
-      </div>
-        
-  <div class=".bg-image">
+          >
+      </li>
+      <li>
+        <strong id = "temperature"></strong>
+        <span class="units" id = "celcius-link" class="active"> °C | 
+        <a href= "#"  id = "fahrenheit-link">°F</a></span>
+      </li>
+      </ul>
+  </div>
     
+    </div>
+    </div>
   </div>
    <script  src = "script.js"></script>   
   </body>

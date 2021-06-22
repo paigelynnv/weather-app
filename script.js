@@ -30,7 +30,6 @@ function displayTemp(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-
   celciusTemp = response.data.main.temp;
 
   cityElement.innerHTML = response.data.name;
@@ -39,48 +38,47 @@ function displayTemp(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formateDate(response.date.dt * 1000);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-}
-
-function search {
-  let apiKey = "2fdf8a69bf0d67738ab9917d87bd1637";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
-  &units=metric`;
-  axios.get(apiUrl).then(displayTemp);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElemenet = document.querySelector("#city-input");
   search(cityInputElemenet.value);
+  console.log(cityInputElemenet.value);
+}
+
+function search(city) {
+  let apiKey = "2fdf8a69bf0d67738ab9917d87bd1637";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
+  &units=metric`;
+  axios.get(apiUrl).then(displayTemp);
 }
 
 function showfahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (celciusTemp * 9)/ 5 + 32;
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
   alert(fahrenheitTemp);
   let tempElement = document.querySelector("#temp");
   tempElement.innerHTML = Math.round(fahrenheitTemp);
   celicusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-
 }
 
-function showcelciusTemp(event){
+function showcelciusTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
   tempElement.innerHTML = Math.rounf(celciusTemp);
-   celicusLink.classList.add("active");
+  celicusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-
 }
 
 let celciusTemp = null;
 
-
-search("New York");
-
-let form = document.querySelector("search-form");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
