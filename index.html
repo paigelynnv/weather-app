@@ -53,7 +53,12 @@
       </ul>
      
       <p>
-          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="cloud image">
+          <img 
+          src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
+          alt="cloud image"
+          id= "icon"
+          class="float-left">
+
       </p>
       <div class="city-row">
           <div class="col-6">
@@ -70,7 +75,8 @@
                 <img src="" alt="clear" id= "icon" class="float-left">
                 <div class="float-left">
                   <strong id = "temperature"></strong>
-                  <span class="units"> °C | <a href= "#"  id = "fahrenheit-link">°F</a></span>
+                  <span class="units" id = "celcius-link" class="active"> °C | 
+                    <a href= "#"  id = "fahrenheit-link">°F</a></span>
                 </div>
               </div>
               </div>
