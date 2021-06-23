@@ -16,10 +16,10 @@
   </head>
   <body>
 <div class="container">
-  <div class="weather-app-wrapper">
-    <div class= "weather-app">
+<div class= "weather-app">
 
-  
+
+
     <form id="search-form" class="mb-3">
       <div class="row">
         <div class="col-9">
@@ -41,18 +41,19 @@
       </div>
     </form>
 
+  <h1 id="city">Doylestown</h1>
       
-    
+  <div class="location-details">
   <ul>
-      <li><strong>Doylestown</strong><span id="city"></span></li>
       <li> Friday 5:00pm <span id= "date"></span></li>
       <li>Last updated: <span id = "date"></span> </li>
       <li id = "discription">Sunny</li>
   </ul>
-
+</div>  
 
 <div class="row">
-  <div class="col-6">
+<div class="col-6">
+  <div class="weather-details">
     <ul>
       <li>
         Humidity:<span id = "humidity" ></span>
@@ -64,24 +65,21 @@
         Percipitation:<span id="Percipitation"></span>
       </li>
     </ul>  
+  </div>
+  </div>
   <div class="col-6">
-    <ul>
-      <li>
+   <div class="icon-temp">
         <img 
           src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
           alt="cloud image"
           id= "icon"
-          >
-      </li>
-      <li>
+        >
         <strong id = "temperature"></strong>
-        <span class="units" id = "celcius-link" class="active"> °C | 
+        <span class="units" id = "celcius-link" class="active"> 20°C | 
         <a href= "#"  id = "fahrenheit-link">°F</a></span>
-      </li>
-      </ul>
-  </div>
-    
     </div>
+  </div>
+ </div>   
     </div>
   </div>
    <script  src = "script.js"></script>   
