@@ -22,11 +22,11 @@ function formatDate(timestamp) {
 }
 
 function displayTemp(response) {
-  let tempElement = document.querySelector("#temp");
+  let tempElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
+  let windElement = document.querySelector("#Wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
@@ -53,8 +53,7 @@ function handleSubmit(event) {
 
 function search(city) {
   let apiKey = "2fdf8a69bf0d67738ab9917d87bd1637";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
-  &units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemp);
 }
 
@@ -71,7 +70,7 @@ function showfahrenheitTemp(event) {
 function showcelciusTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = Math.rounf(celciusTemp);
+  tempElement.innerHTML = Math.round(celciusTemp);
   celicusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
