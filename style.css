@@ -6,7 +6,6 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 45px;
   color: rgb(68, 65, 65);
-
 }
 
 .weather-app {
@@ -16,14 +15,11 @@ h1 {
   margin-top: 60px;
   border: 1px solid black;
   border-radius: 5px;
-  
 }
 
 h2 {
   text-align: right;
   font-size: 15px;
-
-
 }
 
 .weather-details {
@@ -31,11 +27,10 @@ h2 {
 
   text-emphasis: none;
   font-size: 15px;
-
 }
 
 .icon-temp {
-  text-emphasis:none;
+  text-emphasis: none;
   text-decoration: none;
 
   font-size: 30px;
@@ -43,4 +38,25 @@ h2 {
 
 li {
   list-style: none;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.forecast-date {
+  margin-bottom: 8px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.forecast-temp {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.forecast-temp-min {
+  opacity: 0.5;
 }
