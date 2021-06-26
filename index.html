@@ -42,7 +42,7 @@
 
         <div class="location-details">
           <ul>
-            <li>Friday 5:00pm <span id="date"></span></li>
+            <li>Friday 5:00pm <span id="time"></span></li>
             <li>Last updated: <span id="date"></span></li>
             <li id="discription">Sunny</li>
           </ul>
@@ -65,26 +65,28 @@
                 id="icon"
               />
               <strong id="temperature"></strong>
-              <span class="units" id="celcius-link" class="active">
-                20°C | <a href="#" id="fahrenheit-link">°F</a></span
+              <span class="units"
+                ><a href="#" id="celcius-link" class="active"> °C |</a>
+                <a href="#" id="fahrenheit-link" class="active">°F</a></span
               >
-            </div>
-          </div>
-        </div>
-        <div class="weather-forecast">
-          <div class="row">
-            <div class="col-2">
-              <div class="forecast-date">Thursday</div>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt=""
-                width="36"
+             </div>
+            <div class="weather-forecast">
+            <div class="row">
+            </div class="col-2">
+              <div class="weather-forecast-date">
+                Friday
+              </div>
+              <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt=""
+              width="36"
               />
-              <div class="forecast-temp">
-                <span class="forecast-temp-max"> 18° </span>
-                <span class="forecast-temp-min"> 12° </span>
+              <div class="weather-forecast-temp">
+                <span class="weather-forecast-temp-max"> 18° | </span>
+                <span class="weather-forecast-temp-min"> 12°</span>
               </div>
             </div>
+          </div>
+           
           </div>
         </div>
       </div>

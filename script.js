@@ -61,7 +61,7 @@ function showfahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
   alert(fahrenheitTemp);
-  let tempElement = document.querySelector("#temp");
+  let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(fahrenheitTemp);
   celicusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -69,7 +69,7 @@ function showfahrenheitTemp(event) {
 
 function showcelciusTemp(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
+  let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(celciusTemp);
   celicusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");

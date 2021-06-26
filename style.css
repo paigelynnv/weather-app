@@ -32,8 +32,7 @@ h2 {
 .icon-temp {
   text-emphasis: none;
   text-decoration: none;
-
-  font-size: 30px;
+  font-size: 50px;
 }
 
 li {
@@ -59,4 +58,8 @@ li {
 
 .forecast-temp-min {
   opacity: 0.5;
+}
+
+.units {
+  font-size: 15px;
 }
